@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lexend+Deca&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lexend+Deca&display=swap");
 
 :root {
   --blue: #3ea1db;
   --blue-dark: #574ae8;
+  --bg-body: #f3f5f7;
   --white: #fff;
 
-  --title: #313131;
-  --text: #b6b6b6;
+  --title: #1a202c;
+  --text: #717171;
 
   --linear: linear-gradient(90deg, #574ae8 0%, #3ea1db 100%);
 }
@@ -17,4 +18,111 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--bg-body);
+}
 
+header {
+  display: flex;
+  justify-content: center;
+  background: var(--linear);
+  padding: 40px 0;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  width: 63vw;
+}
+
+.header-content h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: white;
+}
+
+.header-content h1 a {
+  text-decoration: none;
+  color: white;
+}
+
+header form {
+  display: flex;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+header form input {
+  font-family: "Inter", sans-serif;
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.25em;
+  color: var(--white);
+}
+
+header form input::placeholder {
+  color: var(--white);
+  opacity: 0.5;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  padding: 100px 0;
+}
+
+main .card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 63vw;
+  padding: 25px;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+
+.header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-card span {
+  font-size: 1em;
+  color: var(--text);
+}
+
+.content-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  line-height: 32px;
+  text-indent: 2px;
+}
+
+.content-card h2 {
+  color: var(--title);
+  font-weight: 400;
+  font-size: 1.625em;
+}
+
+.content-card p {
+  color: var(--text);
+  font-weight: 400;
+  font-size: 1.125em;
+}
