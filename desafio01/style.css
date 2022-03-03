@@ -21,6 +21,7 @@
 body {
   min-height: 100vh;
   font-family: "Lexend Deca", sans-serif;
+  font-size: 16px;
   background-color: var(--bg-body);
 }
 
@@ -52,7 +53,7 @@ header {
   color: white;
 }
 
-header form {
+.header-content form {
   display: flex;
   gap: 20px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -60,7 +61,7 @@ header form {
   border-radius: 5px;
 }
 
-header form input {
+.header-content form input {
   font-family: "Inter", sans-serif;
   background: transparent;
   border: none;
@@ -70,7 +71,7 @@ header form input {
   color: var(--white);
 }
 
-header form input::placeholder {
+.header-content form input::placeholder {
   color: var(--white);
   opacity: 0.5;
 }
@@ -103,7 +104,7 @@ main .card {
 }
 
 .header-card span {
-  font-size: 1em;
+  font-size: 1rem;
   color: var(--text);
 }
 
@@ -125,4 +126,52 @@ main .card {
   color: var(--text);
   font-weight: 400;
   font-size: 1.125em;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+
+  header {
+    padding: 50px 0;
+  }
+
+  .header-content {
+    width: 90.34vw;
+    gap: 40px;
+  }
+
+  .header-content form {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  main {
+    gap: 25px;
+
+    padding: 50px 0;
+  }
+
+  main .card {
+    width: 90.34vw;
+    padding: 15px;
+    gap: 27px;
+  }
+
+  .card span {
+    font-size: 1.167em;
+  }
+
+  .content-card h2 {
+    line-height: 22px;
+  }
+
+  .content-card p {
+    line-height: 26px;
+  }
+
+
 }
