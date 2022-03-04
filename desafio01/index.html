@@ -87,5 +87,21 @@
         </div>
       </div>
     </main>
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      const sr = ScrollReveal({
+        origin: 'top',
+        distance: '50px',
+        duration: 1000,
+        reset: true
+      });
+
+      ScrollReveal().reveal('.card', {delay: 200});
+      ScrollReveal().reveal('.header-post', {delay: 300});
+      ScrollReveal().reveal('.content-card h2', {delay: 400});
+      ScrollReveal().reveal('.content-card p',  {delay: 500});
+    </script>
   </body>
 </html>
