@@ -1,0 +1,53 @@
+@media screen and (min-width: 768px) {
+   html {
+       font-size: 100%;
+   } 
+
+   body {
+       font-size: 1rem;
+   }
+
+   .bgHeader {
+       height: 378px;
+       padding: 0 0 0 100px;
+   }
+
+   .contentHeader {
+       gap: 20px;
+   }
+
+   .contentHeader h1 {
+       font-size: 2em;
+   }
+
+   .contentHeader p {
+       width: 468px; 
+       line-height: 35.31px;
+       font-size: 1.125em;
+   }
+
+   .bgHeader::before {
+       background-position: center center;
+   }
+
+   main {
+       padding: 58px 0;
+   }
+
+   .mainTitle h2 {
+       font-size: 2em;
+   }
+
+   .mainTitle p {
+       font-size: 1.125em;
+   }
+
+   .itemsContainer {
+       gap: 13px;
+   }
+
+   .itemsContainer .item {
+       padding: 76px 25px;
+       width: 300px;
+   }
+}
