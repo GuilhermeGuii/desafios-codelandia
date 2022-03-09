@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="responsive.css">
 </head>
+
 <body>
     <header>
         <section class="mainHeader">
@@ -17,7 +19,10 @@
         <section class="bgHeader">
             <div class="contentHeader">
                 <h1>A melhor loja de Jordan</h1>
-                <p>O tênis Jordan é fruto de uma velha e forte parceria entre a Nike e o jogador Michael Jordan.</p>
+                <p id="typed"></p>
+                <div id="typed-strings">
+                    <p>O tênis Jordan é fruto de uma velha e forte <br> parceria entre a Nike e o jogador Michael Jordan.</p>
+                </div>
             </div>
         </section>
     </header>
@@ -44,5 +49,13 @@
     <footer>
         <p>Todos os direitos reservados</p>
     </footer>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed('#typed', {
+            stringsElement: '#typed-strings',
+            typeSpeed: 45
+        });
+    </script>
+
 </html>
