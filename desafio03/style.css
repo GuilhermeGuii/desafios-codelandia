@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font1: "Merriweather", sans-serif;
+  --font2: "Lato", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  font-family: var(--font1);
+}
+
+p,
+button,
+form {
+  font-family: var(--font2);
+}
+
+
+
+header {
+  width: 100%;
+  padding: 98px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: #d7d4ff;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.headerContent h1 {
+  width: 350px;
+  margin-bottom: 18px;
+  line-height: 47px;
+  font-size: 2.25em;
+  color: #2b2b2b;
+}
+
+.headerContent p {
+  width: 390px;
+  margin-bottom: 45px;
+  line-height: 32px;
+  font-size: 1.188em;
+  color: #555555;
+}
+
+.headerContent button {
+  width: 155px;
+  background-color: #6c63ff;
+  font-size: 1.25em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 14px 0;
+  border: none;
+  outline: none;
+  box-shadow: 0px 5px 5px rgba(23, 23, 23, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.headerContent button:hover {
+    background: #fff;
+    color: #2c0b8e
+}
+
+.headerImg {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    /* Floating Animation */
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+
+}
+
+@keyframes floating {
+    0% { transform: translate(0, 0px); }
+    50% { transform: translate(0, 15px); }
+    100% { transform: translate(0, -0px); }
+}
+
+.headerImg img {
+  width: 80%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 150px 0;
+}
+
+.cardsBox {
+  display: flex;
+  justify-content: center;
+  gap: 68px;
+  column-gap: 111px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 1.11fr 1fr;
+  width: 340px;
+  height: 423px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card .imgContent {
+  background-color: #ff6363;
+}
+
+.card:nth-of-type(2) .imgContent {
+  background-color: #63ecff;
+}
+
+.card:nth-of-type(3) .imgContent {
+  background-color: #f363ff;
+}
+
+.card:nth-of-type(4) .imgContent {
+  background-color: #63ff73;
+}
+
+.card:nth-of-type(5) .imgContent {
+  background-color: #ffdd63;
+}
+
+.card:nth-of-type(6) .imgContent {
+  background-color: #6663ff;
+}
+
+.card .infoContent {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  margin-top: 24px;
+}
+
+.card .infoContent h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin-bottom: 26px;
+}
+
+.card .infoContent p {
+  font-size: 1.125em;
+  color: #555555;
+  font-weight: 400;
+  line-height: 30px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  background: #d7d4ff;
+}
+
+footer form {
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form input::placeholder,
+textarea::placeholder {
+  font-family: var(--font2);
+  color: rgba(110, 114, 117, 0.741);
+}
+footer form label {
+    display: flex;
+    align-self: center;
+  margin-bottom: 60px;
+}
+
+footer form label > h2 {
+  font-size: 2em;
+  color: #2b2b2b;
+  font-weight: 400, normal;
+}
+
+footer form input {
+  margin-bottom: 15px;
+}
+footer form input,
+textarea {
+  padding: 20px 15px;
+  border-radius: 6px;
+  font-size: 1.125rem;
+  color: #2b2b2b;
+  border: none;
+  outline: none;
+}
+
+footer form textarea {
+  resize: none;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+
+footer form button {
+  background-color: #6c63ff;
+  font-size: 1.25em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #fff;
+  padding: 13px 0;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+footer form button:hover {
+    background: #fff;
+    color: #2c0b8e
+}
