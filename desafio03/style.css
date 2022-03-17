@@ -11,7 +11,12 @@
   --font2: "Lato", sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
+  font-size: 1.6rem;
   min-height: 100vh;
 }
 
@@ -26,23 +31,19 @@ form {
   font-family: var(--font2);
 }
 
-
-
 header {
-  width: 100%;
-  padding: 98px 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background: #d7d4ff;
+  padding: 0 100px;
 }
 
 .headerContent {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-self: center;
+  padding: 138px 0 120px 0;
 }
 
 .headerContent h1 {
@@ -78,38 +79,43 @@ header {
 }
 
 .headerContent button:hover {
-    background: #fff;
-    color: #2c0b8e
+  background: #fff;
+  color: #2c0b8e;
 }
 
 .headerImg {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 77px 0 124px 0;
 
-    /* Floating Animation */
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
-
+  /* Floating Animation */
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes floating {
-    0% { transform: translate(0, 0px); }
-    50% { transform: translate(0, 15px); }
-    100% { transform: translate(0, -0px); }
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
 }
 
 .headerImg img {
-  width: 80%;
+  width: 100%;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: #f9f9f9;
   padding: 150px 0;
@@ -118,14 +124,13 @@ main {
 .cardsBox {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 68px;
   column-gap: 111px;
   flex-wrap: wrap;
 }
 
 .card {
-  display: grid;
-  grid-template-rows: 1.11fr 1fr;
   width: 340px;
   height: 423px;
   background-color: #fff;
@@ -135,7 +140,7 @@ main {
 }
 
 .card:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .card .imgContent {
@@ -162,18 +167,25 @@ main {
   background-color: #6663ff;
 }
 
+.card .imgContent {
+  width: 100%;
+  height: 52.49%;
+}
+
 .card .infoContent {
   display: flex;
   flex-direction: column;
-  padding: 0 30px;
-  margin-top: 24px;
+  gap: 26px;
+  padding: 25px;
+  overflow-y: visible;
 }
 
 .card .infoContent h2 {
   font-size: 1.5em;
+  height: 31px;
+  overflow-y: auto;
   font-weight: 700;
   color: #2b2b2b;
-  margin-bottom: 26px;
 }
 
 .card .infoContent p {
@@ -181,6 +193,8 @@ main {
   color: #555555;
   font-weight: 400;
   line-height: 30px;
+  overflow-y: auto;
+  height: 90px;
 }
 footer {
   display: flex;
@@ -203,15 +217,15 @@ textarea::placeholder {
   color: rgba(110, 114, 117, 0.741);
 }
 footer form label {
-    display: flex;
-    align-self: center;
+  display: flex;
+  align-self: center;
   margin-bottom: 60px;
 }
 
-footer form label > h2 {
+footer form label h1 {
   font-size: 2em;
   color: #2b2b2b;
-  font-weight: 400, normal;
+  font-weight: 400;
 }
 
 footer form input {
@@ -225,6 +239,7 @@ textarea {
   color: #2b2b2b;
   border: none;
   outline: none;
+  font-size: 100%;
 }
 
 footer form textarea {
@@ -243,11 +258,92 @@ footer form button {
   border: none;
   outline: none;
   border-radius: 5px;
+  box-shadow: 0px 5px 5px rgba(23, 23, 23, 0.1);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 footer form button:hover {
-    background: #fff;
-    color: #2c0b8e
+  background: #fff;
+  color: #2c0b8e;
+}
+
+/* Responsividade */
+
+@media (max-width: 1100px) {
+  header {
+    justify-content: center;
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 790px) {
+  header {
+    padding: 55px 0 88px 0;
+    flex-direction: column;
+    gap: 115px;
+  }
+
+  .headerContent {
+    align-self: center;
+    padding: 0;
+  }
+
+  .headerImg {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .headerImg img {
+    width: 80%;
+  }
+
+  main {
+    padding: 75px 0;
+  }
+}
+
+@media (max-width: 414px) {
+  .headerContent {
+    width: auto;
+    align-self: flex-start;
+    padding: 0 20px;
+  }
+
+  .headerContent h1 {
+    width: auto;
+    font-size: 2em;
+    font-weight: 400;
+  }
+
+  .headerContent p {
+    width: auto;
+    text-align: justify;
+    font-size: 1.125em;
+  }
+
+  .headerImg {
+    justify-content: flex-start;
+    padding: 0 32px;
+  }
+  .headerImg img {
+    width: 100%;
+  }
+
+  main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .cardsBox {
+    gap: 30px;
+  }
+
+  .card {
+    width: auto;
+  }
+
+  footer {
+    padding: 80px 20px 56px 20px;
+  }
 }

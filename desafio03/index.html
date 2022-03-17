@@ -103,5 +103,19 @@
         <button type="submit">Enviar mensagem</button>
       </form>
     </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      const sr = ScrollReveal({
+        origin: "top",
+        distance: "50px",
+        duration: 2000,
+        reset: true,
+      });
+
+      ScrollReveal().reveal(".card", { delay: 200 });
+      ScrollReveal().reveal(".imgContent", { delay: 300 });
+      ScrollReveal().reveal(".infoContent", { delay: 400 });
+    </script>
   </body>
 </html>
