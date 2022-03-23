@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+    --green-light: #04C35C;
+    --purple-light: #2B6CB0;
+
+    --white: #FFFFFF;
+    --white-200: #F7FAFC;
+    --black: #1A202C;
+}
