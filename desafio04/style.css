@@ -1,16 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap");
 
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --green-light: #04C35C;
-    --purple-light: #2B6CB0;
+  --green-light: #04c35c;
+  --purple-light: #2b6cb0;
 
-    --white: #FFFFFF;
-    --white-200: #F7FAFC;
-    --black: #1A202C;
+  --white: #ffffff;
+  --white-200: #f7fafc;
+  --black: #1a202c;
 }
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--white);
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: var(--purple-light);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.login-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: var(--white-200);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+form {
+  font-family: "Lato", sans-serif;
+  color: var(--black);
+}
+
+form .title-login {
+  font-family: "Merriweather", serif;
+  margin-bottom: 40px;
+}
+
+form .title-login h1 {
+  font-size: 1.625em;
+}
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+fieldset:nth-of-type(1) {
+  gap: 11px;
+}
+
+fieldset:nth-of-type(1) input {
+  padding: 15px 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  outline: none;
+}
+
+fieldset:nth-of-type(1) input::placeholder {
+  font-size: 0.875em;
+  letter-spacing: 1px;
+}
+
+fieldset:nth-of-type(2) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875em;
+  margin: 26px 0;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+/* Checkbox style */
+
+[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  color: var(--green-light);
+  vertical-align: middle;
+  -webkit-appearance: none;
+  background: none;
+  border: 0 solid #e8e8e8;
+  outline: 0;
+  flex-grow: 0;
+  border-radius: 50%;
+  background-color: var(--white-200);
+  transition: 300ms;
+  cursor: pointer;
+}
+
+/* checkbox::before style */
+
+[type="checkbox"]::before {
+  content: "";
+  color: transparent;
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  border: 0;
+  background-color: transparent;
+  background-size: contain;
+  box-shadow: inset 0 0 0 1px #ccd3d8;
+}
+
+/*Checkbox Checked Style */
+
+[type="checkbox"]:checked {
+  background-color: currentcolor;
+}
+
+[type="checkbox"]:checked::before {
+  box-shadow: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M15.88 8.29L10 14.17l-1.88-1.88a.996.996 0 1 0-1.41 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7a.996.996 0 0 0 0-1.41c-.39-.39-1.03-.39-1.42 0z' fill='%23fff'/%3E %3C/svg%3E");
+}
+
+fieldset:nth-of-type(3) {
+  position: relative;
+  gap: 15px;
+}
+
+fieldset:nth-of-type(3) button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: var(--white);
+  font-size: 1em;
+  font-weight: 700;
+  font-style: normal;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+fieldset:nth-of-type(3) button:nth-of-type(1) {
+  background-color: var(--green-light);
+}
+
+fieldset:nth-of-type(3) button:nth-of-type(2) {
+  background-color: var(--black);
+  gap: 11px;
+}
+
+.sing-up {
+    text-align: center;
+}
+
+
+/* Responsive */
+
+
