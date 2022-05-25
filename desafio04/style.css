@@ -18,6 +18,7 @@
 body {
   min-height: 100vh;
   display: grid;
+  place-items: center;
   grid-template-columns: 1fr 1fr;
   background-color: var(--white);
   object-fit: cover;
@@ -177,5 +178,15 @@ fieldset:nth-of-type(3) button:nth-of-type(2) {
 
 
 /* Responsive */
+
+@media (max-width: 600px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  .login-img {
+    display: none;
+  }
+}
 
 
