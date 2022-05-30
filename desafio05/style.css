@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #628E75;
+    --gradient-default: linear-gradient(#628E75, #1A4855);
+    --white: #F9F9F9;
+}
+
+body {
+    min-height: 100vh;
+    background-image: var(--gradient-default);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 40px;
+    padding-left: 165px;
+    padding-right: 186px;
+    padding-bottom: 75px;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+nav.socials {
+    display: flex;
+    gap: 30px;
+}
+
+main {
+    display: flex;
+    align-self: center;
+}
+
+section.main-info {
+    width: 500px;
+    margin: 0 165px;
+}
+
+.main-info h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.250em;
+    margin-bottom: 15px;
+}
+
+.main-info h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 4.250em;
+    line-height: 75px;
+    margin-bottom: 25px;
+}
+
+.main-info p {
+    font-weight: 400;
+    line-height: 28px;
+    font-size: 1em;
+    margin-bottom: 45px;
+}
+
+.main-info-links {
+    display: flex;
+    gap: 20px;
+}
+
+.main-info-links a {
+    padding: 8px 40px;
+    transform: skew(-20deg);
+    text-decoration: none;
+    transition: 200ms;
+}
+
+.main-info-links a:nth-child(1) {
+    background-color: var(--green);
+}
+
+.main-info-links a:nth-child(2) {
+    border: 2px solid var(--green);
+}
+
+.main-info-links a button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: var(--white);
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+    cursor: pointer;
+    transform: skew(20deg);
+    transition: 200ms;
+}
+
+main div.logo {
+    width: 500px;
+}
+
+main div.logo img {
+    min-width: 100%;
+}
