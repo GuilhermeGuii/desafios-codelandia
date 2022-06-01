@@ -27,7 +27,6 @@ header {
     padding-top: 40px;
     padding-bottom: 75px;
     width: 100%;
-    /* background-color: black; */
 }
 
 .header-items {
@@ -54,7 +53,6 @@ main {
     display: flex;
     justify-content: center;
     width: 100%;
-    /* background-color: gray; */
 }
 
 .main-items {
@@ -62,8 +60,6 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 80vw;
-    /* background-color: burlywood; */
-
 }
 
 .main-info {
@@ -143,6 +139,26 @@ main {
     align-self: center;
     max-width: 500px;
     width: 35vw;
+
+    /* Floating Animation */
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, 0px);
+    }
 }
 
 .art img {
