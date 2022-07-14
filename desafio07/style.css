@@ -1,0 +1,292 @@
+@font-face {
+    font-family: Valorant;
+    src: url(fonts/Valorant.ttf) format(truetype);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --card-clipping: polygon(0 9%, 9% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    font-size: 16px;
+    color: white;
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: brightness(12%);
+    padding: 0 150px;
+}
+
+#blur-shape {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #FF4656;
+    opacity: 0.7;
+    overflow: hidden;
+    z-index: -2;
+    background-attachment: fixed;
+}
+
+.shape-1 {
+    top: -150px;
+    right: -150px;
+    width: 390.27px;
+    height: 299.52px;
+    filter: blur(120px);
+    transform: rotate(-120deg);
+}
+
+.shape-2 {
+    left: 133px;
+    top: 95px;
+    width: 180px;
+    height: 120px;
+    filter: blur(120px);
+    transform: rotate(-47.56deg);
+}
+
+.shape-3 {
+    bottom: 10%;
+    left: 30%;
+    width: 180px;
+    height: 120px;
+    filter: blur(120px);
+    transform: rotate(-47.56deg);
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+}
+
+header h1 {
+    font-size: 1.5em;
+}
+
+main {
+    width: 100%;
+    height: 78vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main h2 {
+    font-family: 'Valorant', 'Open Sans', sans-serif;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 42px;
+    color: transparent;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.cards figure {
+    position: relative;
+    font-size: 1em;
+    font-weight: 700;
+    color: #FF4656;
+    transition: 200ms;
+}
+
+.cards figure:hover {
+    transform: scale(1.1);
+}
+
+.cards figure picture {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+}
+
+.cards figure .border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 174px;
+    height: 174px;
+
+    background-color: white;
+    clip-path: var(--card-clipping);
+}
+
+.cards figure img.character {
+    background-color: #FF4656;
+    clip-path: var(--card-clipping);
+    width: 170px;
+    height: 170px;
+}
+
+.cards figure figcaption {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+main .main-character {
+    position: absolute;
+    height: 85vh;
+    bottom: 0;
+    right: 24px;
+}
+
+footer {
+    width: 100%;
+    height: 7vh;
+}
+
+footer nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+footer nav a img {
+    transition: 150ms;
+}
+
+footer nav a img:hover {
+    transform: scale(1.2);
+    box-shadow: 2px 2px 10px #FF4656;
+}
+
+/* Responsividade */
+
+@media (max-width: 1280px) {
+    main .main-character {
+        right: 12px;
+    }
+}
+
+@media (max-width: 1164px) {
+
+    body {
+        padding: 0 80px;
+    }
+}
+
+@media (max-width: 1064px) {
+    .cards figure .border {
+        width: 136px;
+        height: 136px;
+    }
+
+    .cards figure img.character {
+        width: 132px;
+        height: 132px;
+    }
+}
+
+@media (max-width: 954px) {
+    body {
+        padding: 0 60px;
+    }
+
+    .cards {
+        gap: 21px;
+    }
+
+    main .main-character {
+        height: 50vw;
+
+    }
+}
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .shape-1 {
+        top: -5%;
+        right: -5%;
+        width: 207px;
+        height: 158.87px;
+        filter: blur(100px);
+    }
+
+    .shape-2,
+    .shape-3,
+    .main-character {
+        visibility: hidden;
+        display: none;
+    }
+
+    header a img {
+        width: 40px;
+    }
+
+    main h2 {
+        text-align: center;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer nav {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 414px) {
+    body {
+        padding: 0 24px;
+    }
+
+    header h1,
+    main h2 {
+        visibility: hidden;
+        display: none;
+    }
+
+    header {
+        height: 10vh;
+    }
+
+    main {
+        height: 78vh;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 12vh;
+    }
+}
