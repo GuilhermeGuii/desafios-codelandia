@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Saira:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #181d27;
+    --light-black: #1F2633;
+    --blue: #1d84b5;
+    --white: #ffffff;
+    --discord-color: #36393F;
+    --discord-link-color: #3BA55D;
+    --discord-link-color-hover: #215B32;
+
+    --main-font: 'Inter', sans-serif;
+    --title-font: 'Saira', 'Open Sans';
+}
+
+html,
+body {
+    min-height: 100vh;
+    font-family: var(--main-font);
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto;
+    background-color: var(--light-black);
+    color: var(--white);
+    font-size: 16px;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--black);
+    border-bottom: 3px solid var(--blue);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.615);
+}
+
+header h1 {
+    font-family: var(--title-font);
+    font-weight: 500;
+    font-size: 2.5em;
+    border-left: 3px solid var(--blue);
+    padding-left: 10px;
+}
+
+header h1 span {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+header .discord-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--discord-color);
+    padding: 20px;
+    border-radius: 3px;
+}
+
+header .discord-link a {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--discord-link-color);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+header .discord-link a:hover {
+    background-color: var(--discord-link-color-hover);
+    color: #ffffffd8;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 150px;
+}
+
+section {
+    width: 100%;
+    background-color: var(--black);
+    padding: 20px;
+    border-bottom: 3px solid var(--blue);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.615);
+    height: 100%;
+}
+
+section h2 {
+    width: min-content;
+    font-family: var(--title-font);
+    font-weight: 500;
+    font-size: 1.8em;
+    border-bottom: 3px solid var(--blue);
+    margin-bottom: 10px;
+}
+
+section .chellanges-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--light-black);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+    transition: 0.2s;
+}
+
+section .chellanges-links:hover {
+    transform: scale(1.03);
+}
+
+.chellanges-links .project-link {
+    font-size: 1.25em;
+    color: var(--white);
+    border-left: 3px solid var(--blue);
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+.chellanges-links .project-link:hover {
+    text-decoration: underline;
+}
+
+.chellanges-links .sources {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chellanges-links .sources a:hover {
+    transition: 0.4s;
+    opacity: 0.5;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--black);
+    border-top: 3px solid var(--blue);
+    box-shadow: 2px -2px 5px rgba(0, 0, 0, 0.615);
+}
+
+footer p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+footer .socials {
+    display: flex;
+    align-items: center;
+    border-left: 3px solid var(--blue);
+    padding-left: 10px;
+}
+
+footer .socials img:hover {
+    transition: 0.4s;
+    opacity: 0.5;
+}
+
+/* Responsividade */
+
+@media (max-width: 800px) {
+
+    header {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header h1 {
+        border-left: none;
+        border-bottom: 3px solid var(--blue);
+        padding-left: 0;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    main {
+        padding: 50px 50px;
+    }
+}
+
+@media (max-width: 544px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 span {
+        font-size: 14px;
+    }
+
+    header .discord-link {
+        padding: 10px;
+    }
+
+    main {
+        padding: 40px 20px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    section .chellanges-links {
+        margin: 15px 0;
+    }
+
+    .chellanges-links .project-link {
+        padding-left: 8px;
+    }
+
+    footer {
+        flex-direction: column;
+
+    }
+
+    footer p {
+        text-align: center;
+    }
+
+    footer .socials {
+        border-left: none;
+        border-top: 3px solid var(--blue);
+        padding-left: 0;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 344px) {
+
+    header .discord-link {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    header .discord-link img {
+        display: none;
+    }
+
+    header .discord-link a {
+        display: block;
+    }
+}
