@@ -1,0 +1,131 @@
+main .emojis {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+main .emojis::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.emojis img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Emoji 1 */
+main .emojis:nth-child(1) {
+    top: 5%;
+    left: 10%;
+}
+
+main .emojis:nth-child(1)::before {
+    background: linear-gradient(136.92deg, #2DC7ED 3.14%, rgba(45, 199, 237, 0) 100%);
+
+    transform: rotate(45deg);
+}
+
+/* Emoji 2 */
+main .emojis:nth-child(2) {
+    top: 5%;
+    right: 10%;
+}
+
+main .emojis:nth-child(2)::before {
+    background: linear-gradient(270deg, #F2C94C 0%, rgba(242, 201, 76, 0) 100%);
+
+    border-radius: 50%;
+}
+
+/* Emoji 3 */
+main .emojis:nth-child(3) {
+    bottom: 10%;
+    left: 12%;
+}
+
+main .emojis:nth-child(3)::before {
+    background: linear-gradient(136.92deg, #EF7C89 3.14%, rgba(239, 124, 137, 0) 100%);
+
+    border-radius: 30px;
+}
+
+/* Emoji 4 */
+main .emojis:nth-child(4) {
+    bottom: 3%;
+    right: 40%;
+}
+
+main .emojis:nth-child(4)::before {
+    background: linear-gradient(270deg, #7248EC 0%, rgba(114, 72, 236, 0) 100%);
+
+    border-radius: 50%;
+}
+
+/* Emoji 5 */
+main .emojis:nth-child(5) {
+    bottom: 20%;
+    right: 5%;
+}
+
+main .emojis:nth-child(5)::before {
+    background: linear-gradient(180deg, #00E861 0%, rgba(0, 232, 97, 0) 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Responsividade */
+
+@media (max-width: 991px) {
+    main .emojis {
+        width: 112px;
+        height: 112px;
+    }
+
+    main .emojis img {
+        width: 86px;
+        height: 86px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Emoji 1 */
+    main .emojis:nth-child(1) {
+        top: 3%;
+        left: 10%;
+    }
+
+    main .emojis:nth-child(1)::before {
+        border-radius: 8px;
+    }
+
+    /* Emoji 2 */
+    main .emojis:nth-child(2) {
+        top: 0;
+        right: 10%;
+    }
+
+    /* Emoji 3 */
+    main .emojis:nth-child(3) {
+        display: none;
+    }
+
+    /* Emoji 4 */
+    main .emojis:nth-child(4) {
+        bottom: 10%;
+        left: 13%;
+    }
+
+    /* Emoji 5  */
+    main .emojis:nth-child(5) {
+        bottom: 15%;
+        right: 5%;
+    }
+}
