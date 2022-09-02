@@ -1,3 +1,5 @@
+// MENU APPERANCE
+
 const menu = document.querySelector('#menu');
 const menuBurguer = document.querySelector('#menu-burguer');
 const menuItems = document.querySelector('.menu-items');
@@ -20,12 +22,4 @@ menuBurguer.addEventListener('click', () => {
     });
 
 });
-
-
-
-
-
-
-
-
 
