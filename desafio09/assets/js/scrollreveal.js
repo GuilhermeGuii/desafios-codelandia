@@ -3,7 +3,7 @@
 const contactItems = document.querySelectorAll(".about-contact > li");
 const projectItems = document.querySelectorAll(".projects-items > li");
 const serviceItems = document.querySelectorAll(".service-items > li");
-const skillItems = document.querySelectorAll('.skills-items > li');
+const skillItems = document.querySelectorAll(".skills-items > li");
 
 ScrollReveal({ reset: true });
 
@@ -29,8 +29,6 @@ ScrollReveal().reveal(serviceItems, {
 });
 
 ScrollReveal().reveal(skillItems, {
-    distance: '100px',
-    origin: 'bottom',
     delay: 300,
     interval: 200,
     duration: 500

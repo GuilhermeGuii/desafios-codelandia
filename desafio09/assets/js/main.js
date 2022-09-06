@@ -23,3 +23,14 @@ menuBurguer.addEventListener('click', () => {
 
 });
 
+// Sticky Navigation Bar
+
+const sticky = document.querySelector('.header-content');
+window.addEventListener('scroll', () => {
+    if (document.documentElement.scrollTop > 0) {
+        sticky.classList.add("sticky");
+    } else {
+        sticky.classList.remove("sticky");
+    }
+})
+

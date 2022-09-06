@@ -22,7 +22,13 @@ html,
 body {
     min-height: 100vh;
     scroll-behavior: smooth;
+    scroll-padding-block-start: 32px;
     font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
 }
 
 h2 {
@@ -48,12 +54,12 @@ body {
     position: relative;
 }
 
-header {
+header .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 24px 24px 0 24px;
-    position: relative;
+    width: 100%;
 }
 
 header h1 {
@@ -359,6 +365,7 @@ footer {
     width: 100%;
     padding: 12px 0;
     background-color: var(--gray-400);
+    position: relative;
 }
 
 footer p {
